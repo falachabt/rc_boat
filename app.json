@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "guyman",
-    "slug": "guyman",
+    "name": "group",
+    "slug": "group",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "landscape",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {

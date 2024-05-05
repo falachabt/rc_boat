@@ -1,11 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StatusBar } from "expo-status-bar";
+import {  StyleSheet, Text, View } from "react-native"
+import { Ionicons, FontAwesome } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import "react-native-gesture-handler";
+import Auto from "./Components/Auto";
+import Command from "./Components/Command";
+import Setting from "./Components/Setting";
+import { colors } from "./utils/colors";
+import HeaderBar from "./Components/HeaderBar";
+
+import { useEffect } from "react";
+import { GameProvider } from "./contexts/GameContext";
+
+
 
 export default function App() {
+  
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <GameProvider>
+        <HeaderBar />
+       <Command/> 
+
+        <StatusBar style="dark" backgroundColor="white" hidden={true} />
+      </GameProvider>
     </View>
   );
 }
@@ -13,8 +32,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: colors.main,
+    color: colors.text,
   },
 });
